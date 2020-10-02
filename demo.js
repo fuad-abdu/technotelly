@@ -1,0 +1,25 @@
+$(document).ready(function(){
+    $("#submit-form").validate({
+        rules:{
+            name:{
+                required:true,
+                minlength:4
+            },
+            place:{
+                required:true,
+                minlength:1
+            },
+            mail: {
+                required:true,
+                email:true
+            },
+            number:{
+                required:true,
+                minlength:10
+            },
+            message:{
+                required:true
+            }
+        }
+    })
+})
