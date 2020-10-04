@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
+<body style="overflow-x: hidden;">
     <header class="bg-info" style="position: fixed; width: 100%; z-index: 1;">
         <div class="row text-white">
             <div class="col-md-6 col-9 p-3 pl-5 ">
@@ -49,7 +49,7 @@
         <div class="row align-items-center ">
 
           <div class="col-md-6 "style="margin-top: 5em;">
-            <img src="unnamed.jpg"alt="" class="img-fluid rounded-circle ml-4">
+            <img src="unnamed.jpg"alt="" class="img-fluid rounded-circle ml-1">
           </div>
 
           <div class="col-md-6 pl-4">
@@ -268,31 +268,37 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputEmail4">Name</label>
-                  <input name="name" type="text" class="form-control" style="border:solid darkcyan; border-radius: 10px;" id="inputEmail4" placeholder="Name">
+                  <input id="inp" name="name" type="text" class="form-control" style="border:solid darkcyan; border-radius: 10px;" id="inputEmail4" placeholder="Name">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputPassword4">Place</label>
-                  <input name="place" type="text" class="form-control" style="border:solid darkcyan; border-radius: 10px;" id="inputPassword4" placeholder="Place">
+                  <input id="inp" name="place" type="text" class="form-control" style="border:solid darkcyan; border-radius: 10px;" id="inputPassword4" placeholder="Place">
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputAddress">E-mail</label>
-                <input name="mail" type="text" class="form-control" style="border:solid darkcyan; border-radius: 10px;" id="inputAddress" placeholder="E-mail">
+                <input id="inp" name="mail" type="text" class="form-control" style="border:solid darkcyan; border-radius: 10px;" id="inputAddress" placeholder="E-mail">
               </div>
 
               <div class="form-group">
                 <label for="inputAddress">Mobile</label>
-                <input name="number" type="tel" class="form-control" style="border:solid darkcyan; border-radius: 10px;" id="inputAddress" placeholder="Mobile">
+                <input id="inp" name="number" type="tel" class="form-control" style="border:solid darkcyan; border-radius: 10px;" id="inputAddress" placeholder="Mobile">
               </div>
 
               <div class="form-group">
                 <label for="inputAddress">Message</label>
-                <textarea name="message" id="" class="form-control" style="border:solid darkcyan; border-radius: 10px;" cols="30" rows="10" placeholder="Text messages here.."></textarea>
+                <textarea  name="message" id="" class="form-control" style="border:solid darkcyan; border-radius: 10px;" cols="30" rows="10" placeholder="Text messages here.."></textarea>
               </div>
-              <div class="text-center pt-3">
-              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-            </div>
+
+              <div class=" pt-0 text-right"  >
+                <button  type="submit" class="btn btn-primary" style="width: 45%; float:right ;">Send Message</button>
+              </div>
+    
             </form>
+
+            <div class=" pt-0 text-left">
+              <button id="clr-btn" class="btn btn-danger" style="width: 45%; float: left ;">Clear</button>
+            </div>
           </div>
         </div>
       </div>
@@ -332,8 +338,7 @@
               data:$("#submit-form").serialize(),
               method:"post",
               success:function (response){
-                  alert("Form submitted successfully")
-                  window.location.reload()
+                  //window.location.reload()
                   //window.location.href="https://google.com"
               },
               error:function (err){

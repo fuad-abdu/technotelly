@@ -22,4 +22,7 @@ $(document).ready(function(){
             }
         }
     })
+    $("#clr-btn").click(function(){
+        window.location.reload()
+    })
 })
